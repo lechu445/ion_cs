@@ -4,7 +4,7 @@
 Anixe.Ion library is a netstandard2.1 library that provides reader with fast, non-cached, forward only access to *.ion files and writer to build ion file content. 
 
 ## Features
-#### IonReaderFactory
+### IonReaderFactory
 Anixe.Ion library provides static factory which can create an instance for **IonReader** interface. Factory enables two ways of creation the **IonReader** instance:
 
 1. With path to the file. File is opened with: **FileMode.Open**, **FileAccess.Read**, **FileShare.ReadWrite**. Possible argument exceptions:
@@ -39,7 +39,7 @@ Anixe.Ion library provides static factory which can create an instance for **Ion
 * **Read** the main method of the class, it reads the stream provided by IonReader and fires an event for each section
 
 ## Example use
-#### With file path
+### With file path
 ```c#
 class MainClass
 {

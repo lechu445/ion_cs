@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Anixe.Ion.Tester
 {
-    public class MainClass
+    public static class MainClass
     {
         public static void Main(string[] args)
         {
