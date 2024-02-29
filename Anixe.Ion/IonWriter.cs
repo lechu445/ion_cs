@@ -47,7 +47,7 @@ namespace Anixe.Ion
         {
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException("Section name must be provided");
+                throw new ArgumentNullException(nameof(name), "Section name must be provided");
             }
         }
 
@@ -67,7 +67,7 @@ namespace Anixe.Ion
         {
             if (writeValueAction == null)
             {
-                throw new ArgumentNullException($"Provide {nameof(writeValueAction)} parameter");
+                throw new ArgumentNullException(nameof(writeValueAction), $"Provide {nameof(writeValueAction)} parameter");
             }
             ValidateWriteProperty(name);
             ClearState();
@@ -148,7 +148,7 @@ namespace Anixe.Ion
             }
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException($"Property {nameof(name)} must be provided");
+                throw new ArgumentNullException(nameof(name), $"Property {nameof(name)} must be provided");
             }
         }
 
@@ -175,7 +175,7 @@ namespace Anixe.Ion
             }
             if (columns == null || columns.Length == 0)
             {
-                throw new ArgumentNullException("Cannot create empty table header");
+                throw new ArgumentNullException(nameof(columns), "Cannot create empty table header");
             }
         }
 
@@ -196,11 +196,11 @@ namespace Anixe.Ion
         {
             if (columns == null || columns.Length == 0)
             {
-                throw new ArgumentNullException("Cannot create empty table row");
+                throw new ArgumentNullException(nameof(columns), "Cannot create empty table row");
             }
             if (columns.Length != this.lastTableColumns!.Length)
             {
-                throw new ArgumentException("Must provide the same number of columns within the same table");
+                throw new ArgumentException("Must provide the same number of columns within the same table", nameof(columns));
             }
         }
 
@@ -317,7 +317,7 @@ namespace Anixe.Ion
         {
             if (writeCellAction == null)
             {
-                throw new ArgumentNullException("Must provide Action<TextWriter>");
+                throw new ArgumentNullException(nameof(writeCellAction), "Must provide Action<TextWriter>");
             }
         }
 
@@ -325,7 +325,7 @@ namespace Anixe.Ion
         {
             if (writeCellAction == null)
             {
-                throw new ArgumentNullException("Must provide Action<TextWriter, TContext>");
+                throw new ArgumentNullException(nameof(writeCellAction), "Must provide Action<TextWriter, TContext>");
             }
         }
 
