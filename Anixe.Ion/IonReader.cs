@@ -52,7 +52,7 @@ namespace Anixe.Ion
 
         #region IIonReader members
 
-#if NET6_0_OR_GREATER
+#if NET8_0_OR_GREATER
         [MemberNotNullWhen(true, nameof(CurrentSection))]
 #endif
         public bool IsSectionHeader => this.currentLineVerifier.IsSectionHeader(CurrentRawLine);
